@@ -13,7 +13,7 @@ Makelangelo,com.marginallyclever.makelangelo.donatelloimpl.nodes,TransformTurtle
 Makelangelo,com.marginallyclever.makelangelo.donatelloimpl.nodes,TurtleDAO4JSON,0,21,0,0,0,7,0,3,0,3
 Makelangelo,com.marginallyclever.convenience,LineSegment2D,50,47,0,0,3,12,3,3,3,3
 Makelangelo,com.marginallyclever.convenience,ButtonIcon,12,27,1,1,4,8,2,3,1,3
-Makelangelo,com.marginallyclever.convenience,QuadGraph,341,0,40,0,71,0,28,0,8,0
+Makelangelo,com.marginallyclever.convenience,QuadGraph,65,276,8,32,14,57,7,21,1,7
 Makelangelo,com.marginallyclever.convenience,W3CColorNames,8,1510,0,4,2,155,2,4,2,2
 Makelangelo,com.marginallyclever.convenience,ResizableImagePanel.new MouseAdapter() {...},53,0,0,0,9,0,2,0,2,0
 Makelangelo,com.marginallyclever.convenience,ResizableImagePanel.new MouseAdapter() {...},12,0,0,0,3,0,2,0,2,0
@@ -81,11 +81,11 @@ Makelangelo,com.marginallyclever.makelangelo.makeart.io,LoadScratch3,1141,1268,1
 Makelangelo,com.marginallyclever.makelangelo.makeart.io,LoadScratch2,1848,0,193,0,432,0,168,0,49,0
 Makelangelo,com.marginallyclever.makelangelo.makeart.io,LoadScratch3.Scratch3Variables,0,28,0,2,0,5,0,2,0,1
 Makelangelo,com.marginallyclever.convenience.noise,PerlinNoise,284,1057,12,2,29,6,11,2,5,1
-Makelangelo,com.marginallyclever.convenience.noise,CellularNoise.Point,42,0,0,0,9,0,2,0,2,0
-Makelangelo,com.marginallyclever.convenience.noise,CellularNoise,446,0,50,0,53,0,34,0,9,0
-Makelangelo,com.marginallyclever.convenience.noise,SimplexNoise,3083,0,76,0,188,0,47,0,9,0
-Makelangelo,com.marginallyclever.convenience.noise,SimplexNoise.Grad,27,0,0,0,11,0,2,0,2,0
-Makelangelo,com.marginallyclever.convenience.noise,NoiseFactory,19,15,4,0,6,1,5,1,2,1
+Makelangelo,com.marginallyclever.convenience.noise,CellularNoise.Point,0,42,0,0,0,9,0,2,0,2
+Makelangelo,com.marginallyclever.convenience.noise,CellularNoise,0,446,0,50,0,53,0,34,0,9
+Makelangelo,com.marginallyclever.convenience.noise,SimplexNoise,107,2976,23,53,6,182,23,24,0,9
+Makelangelo,com.marginallyclever.convenience.noise,SimplexNoise.Grad,0,27,0,0,0,11,0,2,0,2
+Makelangelo,com.marginallyclever.convenience.noise,NoiseFactory,3,31,0,4,1,6,1,5,1,2
 Makelangelo,com.marginallyclever.communications.tcp,TCPConnection,218,0,24,0,61,0,20,0,8,0
 Makelangelo,com.marginallyclever.communications.tcp,TCPTransportLayer,40,0,0,0,13,0,4,0,4,0
 Makelangelo,com.marginallyclever.makelangelo.makeart.turtlegenerator,TurtleGeneratorPanel,0,8,0,0,0,3,0,1,0,1
@@ -225,17 +225,17 @@ Makelangelo,com.marginallyclever.makelangelo.applicationsettings,MetricsPreferen
 Makelangelo,com.marginallyclever.makelangelo.applicationsettings,ApplicationSettings,231,0,8,0,64,0,13,0,9,0
 Makelangelo,com.marginallyclever.makelangelo.makeart.imagefilter,FilterContrastAdjust,202,0,6,0,44,0,8,0,5,0
 Makelangelo,com.marginallyclever.makelangelo.makeart.imagefilter,FilterDifference,118,0,8,0,24,0,7,0,3,0
-Makelangelo,com.marginallyclever.makelangelo.makeart.imagefilter,ImageFilter,130,3,0,0,25,1,9,1,9,1
+Makelangelo,com.marginallyclever.makelangelo.makeart.imagefilter,ImageFilter,90,43,0,0,18,8,7,3,7,3
 Makelangelo,com.marginallyclever.makelangelo.makeart.imagefilter,FilterLevels,348,0,28,0,69,0,24,0,9,0
 Makelangelo,com.marginallyclever.makelangelo.makeart.imagefilter,FilterDitherFloydSteinbergColor,399,0,24,0,51,0,19,0,7,0
 Makelangelo,com.marginallyclever.makelangelo.makeart.imagefilter,FilterInvert,20,73,0,4,4,16,1,4,1,2
 Makelangelo,com.marginallyclever.makelangelo.makeart.imagefilter,FilterExtendedDifferenceOfGaussians,193,0,8,0,37,0,8,0,4,0
 Makelangelo,com.marginallyclever.makelangelo.makeart.imagefilter,FilterThreshold,71,17,4,2,13,5,3,3,1,2
 Makelangelo,com.marginallyclever.makelangelo.makeart.imagefilter,FilterScale,97,0,4,0,17,0,4,0,2,0
-Makelangelo,com.marginallyclever.makelangelo.makeart.imagefilter,FilterCMYK,460,0,20,0,81,0,19,0,9,0
+Makelangelo,com.marginallyclever.makelangelo.makeart.imagefilter,FilterCMYK,253,207,16,4,45,36,10,9,2,7
 Makelangelo,com.marginallyclever.makelangelo.makeart.imagefilter,FilterDitherFloydSteinberg,289,0,26,0,49,0,18,0,5,0
 Makelangelo,com.marginallyclever.makelangelo.makeart.imagefilter,FilterThresholdFancy,74,51,4,2,13,12,3,3,1,2
-Makelangelo,com.marginallyclever.makelangelo.makeart.imagefilter,FilterGaussianBlur,262,0,10,0,54,0,11,0,6,0
+Makelangelo,com.marginallyclever.makelangelo.makeart.imagefilter,FilterGaussianBlur,99,163,3,7,23,31,4,7,2,4
 Makelangelo,com.marginallyclever.makelangelo.makeart.imagefilter,FilterSubtract,119,0,8,0,23,0,7,0,3,0
 Makelangelo,com.marginallyclever.makelangelo.makeart.imagefilter,FilterDesaturate,140,0,6,0,26,0,8,0,5,0
 Makelangelo,com.marginallyclever.makelangelo.makeart.imagefilter,FilterJumpFlood,247,0,18,0,44,0,15,0,6,0

@@ -46,11 +46,11 @@ import java.awt.*;
 	 * @return RGB color
 	 */
 	protected static int encode32bit(int red,int green,int blue,int alpha) {
-<span class="nc" id="L49">		red &amp;= 0xff;</span>
-<span class="nc" id="L50">		green &amp;= 0xff;</span>
-<span class="nc" id="L51">		blue &amp;= 0xff;</span>
-<span class="nc" id="L52">		alpha &amp;= 0xff;</span>
-<span class="nc" id="L53">		return (alpha &lt;&lt; 24) | (red &lt;&lt; 16) | (green &lt;&lt; 8) | blue;</span>
+<span class="fc" id="L49">		red &amp;= 0xff;</span>
+<span class="fc" id="L50">		green &amp;= 0xff;</span>
+<span class="fc" id="L51">		blue &amp;= 0xff;</span>
+<span class="fc" id="L52">		alpha &amp;= 0xff;</span>
+<span class="fc" id="L53">		return (alpha &lt;&lt; 24) | (red &lt;&lt; 16) | (green &lt;&lt; 8) | blue;</span>
 	}
 
 	/**
@@ -58,8 +58,8 @@ import java.awt.*;
 	 * @return RGB fully opaque
 	 */
 	protected static int encode32bit(int greyscale) {
-<span class="nc" id="L61">		greyscale &amp;= 0xff;</span>
-<span class="nc" id="L62">		return encode32bit(greyscale,greyscale,greyscale,0xff);</span>
+<span class="fc" id="L61">		greyscale &amp;= 0xff;</span>
+<span class="fc" id="L62">		return encode32bit(greyscale,greyscale,greyscale,0xff);</span>
 	}
 
 	/**

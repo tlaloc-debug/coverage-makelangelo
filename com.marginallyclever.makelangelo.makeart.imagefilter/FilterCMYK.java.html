@@ -15,8 +15,8 @@ import java.io.IOException;
  * @author Dan Royer
  */
 public class FilterCMYK extends ImageFilter {
-<span class="nc" id="L18">    private static final Logger logger = LoggerFactory.getLogger(FilterCMYK.class);</span>
-<span class="nc" id="L19">    protected static double levels = 2;</span>
+<span class="fc" id="L18">    private static final Logger logger = LoggerFactory.getLogger(FilterCMYK.class);</span>
+<span class="fc" id="L19">    protected static double levels = 2;</span>
 
     protected TransformedImage img;
     protected TransformedImage channelCyan;
@@ -29,25 +29,25 @@ public class FilterCMYK extends ImageFilter {
      * @param img the &lt;code&gt;java.awt.image.BufferedImage&lt;/code&gt; this filter is using as source material.
      */
     public FilterCMYK(TransformedImage img) {
-<span class="nc" id="L32">        super();</span>
-<span class="nc" id="L33">        this.img = img;</span>
-<span class="nc" id="L34">    }</span>
+<span class="fc" id="L32">        super();</span>
+<span class="fc" id="L33">        this.img = img;</span>
+<span class="fc" id="L34">    }</span>
 
 
     public TransformedImage getC() {
-<span class="nc" id="L38">        return channelCyan;</span>
+<span class="fc" id="L38">        return channelCyan;</span>
     }
 
     public TransformedImage getM() {
-<span class="nc" id="L42">        return channelMagenta;</span>
+<span class="fc" id="L42">        return channelMagenta;</span>
     }
 
     public TransformedImage getY() {
-<span class="nc" id="L46">        return channelYellow;</span>
+<span class="fc" id="L46">        return channelYellow;</span>
     }
 
     public TransformedImage getK() {
-<span class="nc" id="L50">        return channelBlack;</span>
+<span class="fc" id="L50">        return channelBlack;</span>
     }
 
 
@@ -58,49 +58,49 @@ public class FilterCMYK extends ImageFilter {
      */
     @Override
     public TransformedImage filter() {
-<span class="nc" id="L61">        int h = img.getSourceImage().getHeight();</span>
-<span class="nc" id="L62">        int w = img.getSourceImage().getWidth();</span>
+<span class="fc" id="L61">        int h = img.getSourceImage().getHeight();</span>
+<span class="fc" id="L62">        int w = img.getSourceImage().getWidth();</span>
         int px, py;
 
-<span class="nc" id="L65">        BufferedImage bi = img.getSourceImage();</span>
-<span class="nc" id="L66">        channelCyan = new TransformedImage(img);</span>
-<span class="nc" id="L67">        channelMagenta = new TransformedImage(img);</span>
-<span class="nc" id="L68">        channelYellow = new TransformedImage(img);</span>
-<span class="nc" id="L69">        channelBlack = new TransformedImage(img);</span>
+<span class="fc" id="L65">        BufferedImage bi = img.getSourceImage();</span>
+<span class="fc" id="L66">        channelCyan = new TransformedImage(img);</span>
+<span class="fc" id="L67">        channelMagenta = new TransformedImage(img);</span>
+<span class="fc" id="L68">        channelYellow = new TransformedImage(img);</span>
+<span class="fc" id="L69">        channelBlack = new TransformedImage(img);</span>
 
-<span class="nc" id="L71">        BufferedImage cc = channelCyan.getSourceImage();</span>
-<span class="nc" id="L72">        BufferedImage cm = channelMagenta.getSourceImage();</span>
-<span class="nc" id="L73">        BufferedImage cy = channelYellow.getSourceImage();</span>
-<span class="nc" id="L74">        BufferedImage ck = channelBlack.getSourceImage();</span>
+<span class="fc" id="L71">        BufferedImage cc = channelCyan.getSourceImage();</span>
+<span class="fc" id="L72">        BufferedImage cm = channelMagenta.getSourceImage();</span>
+<span class="fc" id="L73">        BufferedImage cy = channelYellow.getSourceImage();</span>
+<span class="fc" id="L74">        BufferedImage ck = channelBlack.getSourceImage();</span>
         double r, g, b, k, ik, c, m, y;
         int pixel;
 
-<span class="nc bnc" id="L78" title="All 2 branches missed.">        for (py = 0; py &lt; h; ++py) {</span>
-<span class="nc bnc" id="L79" title="All 2 branches missed.">            for (px = 0; px &lt; w; ++px) {</span>
-<span class="nc" id="L80">                pixel = bi.getRGB(px, py);</span>
+<span class="fc bfc" id="L78" title="All 2 branches covered.">        for (py = 0; py &lt; h; ++py) {</span>
+<span class="fc bfc" id="L79" title="All 2 branches covered.">            for (px = 0; px &lt; w; ++px) {</span>
+<span class="fc" id="L80">                pixel = bi.getRGB(px, py);</span>
                 //double a = 255-((pixel&gt;&gt;24) &amp; 0xff);
-<span class="nc" id="L82">                r = 1.0 - (double) ((pixel &gt;&gt; 16) &amp; 0xff) / 255.0;</span>
-<span class="nc" id="L83">                g = 1.0 - (double) ((pixel &gt;&gt; 8) &amp; 0xff) / 255.0;</span>
-<span class="nc" id="L84">                b = 1.0 - (double) ((pixel) &amp; 0xff) / 255.0;</span>
+<span class="fc" id="L82">                r = 1.0 - (double) ((pixel &gt;&gt; 16) &amp; 0xff) / 255.0;</span>
+<span class="fc" id="L83">                g = 1.0 - (double) ((pixel &gt;&gt; 8) &amp; 0xff) / 255.0;</span>
+<span class="fc" id="L84">                b = 1.0 - (double) ((pixel) &amp; 0xff) / 255.0;</span>
                 // now convert to cmyk
-<span class="nc" id="L86">                k = Math.min(Math.min(r, g), b);   // should be Math.max(Math.max(r,g),b) but colors are inverted.</span>
-<span class="nc" id="L87">                ik = 1.0 - k;</span>
+<span class="fc" id="L86">                k = Math.min(Math.min(r, g), b);   // should be Math.max(Math.max(r,g),b) but colors are inverted.</span>
+<span class="fc" id="L87">                ik = 1.0 - k;</span>
 
                 //if(ik&lt;1.0/255.0) {
                 //	c1=m1=y1=0;
                 //} else {
-<span class="nc" id="L92">                c = (r - k) / ik;</span>
-<span class="nc" id="L93">                m = (g - k) / ik;</span>
-<span class="nc" id="L94">                y = (b - k) / ik;</span>
+<span class="fc" id="L92">                c = (r - k) / ik;</span>
+<span class="fc" id="L93">                m = (g - k) / ik;</span>
+<span class="fc" id="L94">                y = (b - k) / ik;</span>
                 //}
-<span class="nc" id="L96">                cc.setRGB(px, py, ImageFilter.encode32bit(255 - (int) (c * 255.0)));</span>
-<span class="nc" id="L97">                cm.setRGB(px, py, ImageFilter.encode32bit(255 - (int) (m * 255.0)));</span>
-<span class="nc" id="L98">                cy.setRGB(px, py, ImageFilter.encode32bit(255 - (int) (y * 255.0)));</span>
-<span class="nc" id="L99">                ck.setRGB(px, py, ImageFilter.encode32bit(255 - (int) (k * 255.0)));</span>
+<span class="fc" id="L96">                cc.setRGB(px, py, ImageFilter.encode32bit(255 - (int) (c * 255.0)));</span>
+<span class="fc" id="L97">                cm.setRGB(px, py, ImageFilter.encode32bit(255 - (int) (m * 255.0)));</span>
+<span class="fc" id="L98">                cy.setRGB(px, py, ImageFilter.encode32bit(255 - (int) (y * 255.0)));</span>
+<span class="fc" id="L99">                ck.setRGB(px, py, ImageFilter.encode32bit(255 - (int) (k * 255.0)));</span>
             }
         }
 
-<span class="nc" id="L103">        return img;</span>
+<span class="fc" id="L103">        return img;</span>
     }
 
     /**

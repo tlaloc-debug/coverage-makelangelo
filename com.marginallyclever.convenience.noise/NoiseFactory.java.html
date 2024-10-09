@@ -6,11 +6,11 @@
     }
 
     public static Noise getNoise(int i) {
-<span class="nc bnc" id="L9" title="All 4 branches missed.">        return switch (i) {</span>
-<span class="nc" id="L10">            case 0 -&gt; new PerlinNoise();</span>
-<span class="nc" id="L11">            case 1 -&gt; new SimplexNoise();</span>
-<span class="nc" id="L12">            case 2 -&gt; new CellularNoise();</span>
-<span class="nc" id="L13">            default -&gt; null;</span>
+<span class="fc bfc" id="L9" title="All 4 branches covered.">        return switch (i) {</span>
+<span class="fc" id="L10">            case 0 -&gt; new PerlinNoise();</span>
+<span class="fc" id="L11">            case 1 -&gt; new SimplexNoise();</span>
+<span class="fc" id="L12">            case 2 -&gt; new CellularNoise();</span>
+<span class="fc" id="L13">            default -&gt; null;</span>
         };
     }
 }
